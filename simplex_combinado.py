@@ -277,9 +277,7 @@ def ejecutar_simplex_combinado(matriz_simplex: np.array, objetivo="max"):
         matriz_original = matriz_simplex.copy()
  
     # Iteraciones del primal (si ya es óptimo, no itera)
-    matriz_simplex = ejecutar_simplex_primal(
-        matriz_simplex, basicas, no_basicas, matriz_original
-    )
+    matriz_simplex = ejecutar_simplex_primal(matriz_simplex, basicas, no_basicas, matriz_original)
 
     # 5) Devolver el problema a su versión original.
     # Si era de minimización, se deshace el cambio de signo de la fila z,
